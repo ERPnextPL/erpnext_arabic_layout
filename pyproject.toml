@@ -10,10 +10,10 @@ authors = [
 description = "Arabic Layout"
 readme = "README.md"
 requires-python = ">=3.10"
-dynamic = ["version", "dependencies"]
+version = "0.0.2"
+dynamic = ["dependencies"]
 
 [tool.setuptools.dynamic]
-version = { attr = "erpnext_arabic_layout.__version__" }
 dependencies = { file = ["requirements.txt"] }
 
 [tool.setuptools.packages.find]
