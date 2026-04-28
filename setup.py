@@ -18,7 +18,10 @@ setup(
 	description="Arabic Layout",
 	author="ZamilTec",
 	author_email="hello@zamiltec.com",
-	packages=find_packages(),
+	packages=find_packages(
+		include=["erpnext_arabic_layout", "erpnext_arabic_layout.*"],
+		exclude=["erpnext_arabic_layout.erpnext_arabic_layout*"],
+	),
 	zip_safe=False,
 	include_package_data=True,
 	install_requires=install_requires,
