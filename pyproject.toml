@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "erpnext_arabic_layout"
+authors = [
+    { name = "ZamilTec", email = "hello@zamiltec.com" }
+]
+description = "Arabic Layout"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.0.2"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["erpnext_arabic_layout*"]

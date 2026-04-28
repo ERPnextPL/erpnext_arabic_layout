@@ -2,6 +2,11 @@
 
 Arabic Layout
 
+Compatibility:
+
+- ERPNext v15
+- Frappe Framework v15
+
 ![image](https://github.com/zamiltech/erpnext_arabic_layout/blob/master/Screenshot-01.png)
 
 Installation Steps:
@@ -20,5 +25,4 @@ bench clear-cache
 #### License
 
 MIT
-
 
