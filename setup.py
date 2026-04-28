@@ -1,10 +1,16 @@
+from pathlib import Path
+import re
 from setuptools import setup, find_packages
 
 with open("requirements.txt") as f:
 	install_requires = f.read().strip().split("\n")
 
-# get version from __version__ variable in erpnext_arabic_layout/__init__.py
-from erpnext_arabic_layout import __version__ as version
+# read version without importing package
+version_file = Path(__file__).parent / "erpnext_arabic_layout" / "__init__.py"
+version_match = re.search(r'^__version__\s*=\s*["\']([^"\']+)["\']', version_file.read_text(), re.M)
+if not version_match:
+	raise RuntimeError("Unable to find version string in erpnext_arabic_layout/__init__.py")
+version = version_match.group(1)
 
 setup(
 	name="erpnext_arabic_layout",
